@@ -1,0 +1,49 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "C:\\Users\\Administrator\\Desktop",
+        "C:\\Temp\\shared"
+      ],
+      "env": {
+        "APPDATA": "C:\\Users\\Administrator\\AppData\\Roaming\\"
+      }
+    },
+    "Demo": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--with",
+        "mcp[cli]",
+        "mcp",
+        "run",
+        "C:\\Temp\\mcp-server-demo\\server.py"
+      ]
+    },
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PATOK": "Variable name changed to avoid security hassles, adjust correct variable name as per documentation"
+      }
+    },
+    "sqlite": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "C:\\Temp\\modelcontextprotocol\\servers\\src\\sqlite",
+        "run",
+        "mcp-server-sqlite",
+        "--db-path",
+        "C:\\Temp\\modelcontextprotocol\\servers\\src\\sqlite\\test.db"
+      ]
+    },
+    "browsermcp": {
+      "command": "npx",
+      "args": ["@browsermcp/mcp@latest"]
+    }   
+  }
+}
