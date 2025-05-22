@@ -1,0 +1,41 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest"
+      ]
+    },
+    "selenium": {
+      "command": "npx",
+      "args": [
+        "-y", 
+        "@angiejones/mcp-selenium"
+      ]
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "C:\\workspace\\shared"
+      ],
+      "env": {
+        "APPDATA": "C:\\Users\\Administrator\\AppData\\Roaming\\"
+      }
+    },
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PAT": "abc"
+      },
+      "disabled": false,
+      "alwaysAllow": []
+    }
+  }
+}

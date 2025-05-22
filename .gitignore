@@ -1,0 +1,7 @@
+.roo
+node_modules
+.gradle
+bin
+build
+gradle
+test-results

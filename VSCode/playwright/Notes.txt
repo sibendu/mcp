@@ -1,0 +1,20 @@
+Prompt:
+----------------
+Generate a Playwright test for the following scenario -
+1. Navigate to https://yopmail.com/wm
+2. Login with sibendu@yopmail.com
+3. Open the first email
+4. Check the mail body contains 'This is a test message'
+
+
+Then refine and extend incrementally with more prompts e.g.
+
+Take a screenshot of the email and save in test-results folder
+
+
+
+To Run the playwright test:
+------------------------------
+npm run test:ui
+
+

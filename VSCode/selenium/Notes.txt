@@ -1,0 +1,20 @@
+Prompt:
+----------------
+Generate a Selenium test for the following scenario -
+1. Navigate to https://yopmail.com/wm
+2. Login with sibendu@yopmail.com
+3. Open the first email
+
+
+Then subsequently incremental refinement with more prompts
+e.g.
+
+Please extend my test case to check content of the email body:
+1. Check that the heading contaijns 'This is a test message' 
+
+
+To Run the tests:
+------------------------------
+gradlew clean build 
+
+
