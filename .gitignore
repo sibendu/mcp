@@ -1,7 +1,10 @@
+.venv
 .roo
 node_modules
 .gradle
 bin
 build
 gradle
+.gradle
+target
 test-results
