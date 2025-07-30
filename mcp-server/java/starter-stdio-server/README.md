@@ -15,4 +15,18 @@ Provides two sample tools - getAllCustomers and getCustomer
       ]
     }
 
+## Key Configuration Notes
+
+### STDIO Mode Requirements
+
+Disable web application type (spring.main.web-application-type=none)
+Disable Spring banner (spring.main.banner-mode=off)
+Clear console logging pattern (logging.pattern.console=)
+
+### Server Type
+
+SYNC (default): Uses McpSyncServer for straightforward request-response patterns
+ASYNC: Uses McpAsyncServer for non-blocking operations with Project Reactor support
+
+
 
