@@ -44,6 +44,58 @@
     "browsermcp": {
       "command": "npx",
       "args": ["@browsermcp/mcp@latest"]
-    }   
+    },
+    "excel": {
+         "command": "uvx",
+         "args": ["excel-mcp-server", "stdio"]
+    },
+    "mcp-server-chart": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@antv/mcp-server-chart"
+      ]
+    },
+    "chroma": {
+    	"command": "uvx",
+    	"args": [
+        	"chroma-mcp"
+    	]
+    },
+    "ms365": {
+      	"command": "npx",
+      	"args": ["-y", "@softeria/ms-365-mcp-server"]
+    },
+    "hyperbrowser": {
+	"command": "npx",
+	"args": ["--yes", "hyperbrowser-mcp"],
+	"env": {
+		"HYPERBROWSER_API_KEY": "<API Key>"
+	}
+    },
+    "calculator": {
+	"command": "uvx",
+	"args": ["mcp-server-calculator"]
+    },
+    "apify": {
+            "command": "npx",
+            "args": [
+                "mcp-remote",
+                "https://mcp.apify.com/?actors=fantastic-jobs/career-site-job-listing-api",
+                "--header",
+                "Authorization: Bearer <api_token>"
+            ]
+    },
+    "perplexity-ask": {
+			"command": "npx",
+				"args": [
+					"-y",
+					"server-perplexity-ask"
+				],
+				"env": {
+					"PERPLEXITY_API_KEY": "YOUR_API_KEY_HERE"
+				}
+			}	
+     } 	  		   
   }
 }

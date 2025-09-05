@@ -1,0 +1,23 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.5.4'
+	id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'com.example'
+version = '0.1'
+description = 'Spring AI MCP Weather STDIO server'
+java.sourceCompatibility = JavaVersion.VERSION_21
+
+repositories {
+    mavenLocal()
+    maven { url = uri('https://repo.spring.io/milestone') }
+    maven { url = uri('https://repo.spring.io/snapshot') }
+    maven { url = uri('https://central.sonatype.com/repository/maven-snapshots/') }
+    maven { url = uri('https://repo.maven.apache.org/maven2/') }
+}
+
+dependencies {  
+    implementation platform("org.springframework.ai:spring-ai-bom:1.1.0-SNAPSHOT")  
+    implementation 'org.springframework.ai:spring-ai-starter-mcp-server-webflux'
+}
