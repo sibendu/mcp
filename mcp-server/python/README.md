@@ -67,10 +67,11 @@ python mcp_server_http.py
 
 This will run API server will run on `http://localhost:8000`
 
+At this point, we can test using the Postman collection and responses from MCP Server
 
 # Test with MCP Clients
 
-## 1: Tst with Claude Desktop
+## 1: Test with Claude Desktop
 
 1. Add the following configuration in claude_desktop_config.json 
 
