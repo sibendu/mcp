@@ -1,3 +1,4 @@
+.env
 .venv
 .roo
 node_modules
@@ -8,3 +9,4 @@ gradle
 .gradle
 target
 test-results
+__pycache__

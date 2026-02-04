@@ -1,0 +1,89 @@
+{
+  "info": {
+    "_postman_id": "216d498a-fd4b-4b68-aa25-7556b2993291",
+    "name": "MCP",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "13655034"
+  },
+  "item": [
+    {
+      "name": "Initialize Session",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json, text/event-stream",
+            "type": "text"
+          },
+          {
+            "key": "",
+            "value": "",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"jsonrpc\": \"2.0\",\r\n  \"id\": 1,\r\n  \"method\": \"initialize\",\r\n  \"params\": {\r\n    \"protocolVersion\": \"2025-11-25\",\r\n    \"capabilities\": {\r\n      \"roots\": {\r\n        \"listChanged\": true\r\n      },\r\n      \"sampling\": {},\r\n      \"elicitation\": {\r\n        \"form\": {},\r\n        \"url\": {}\r\n      },\r\n      \"tasks\": {\r\n        \"requests\": {\r\n          \"elicitation\": {\r\n            \"create\": {}\r\n          },\r\n          \"sampling\": {\r\n            \"createMessage\": {}\r\n          }\r\n        }\r\n      }\r\n    },\r\n    \"clientInfo\": {\r\n      \"name\": \"ExampleClient\",\r\n      \"title\": \"Example Client Display Name\",\r\n      \"version\": \"1.0.0\",\r\n      \"description\": \"An example MCP client application\",\r\n      \"icons\": [\r\n        {\r\n          \"src\": \"https://example.com/icon.png\",\r\n          \"mimeType\": \"image/png\",\r\n          \"sizes\": [\"48x48\"]\r\n        }\r\n      ],\r\n      \"websiteUrl\": \"https://example.com\"\r\n    }\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/mcp",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "mcp"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Tools",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json, text/event-stream",
+            "type": "text"
+          },
+          {
+            "key": "Mcp-Session-Id",
+            "value": "d687db4bfa1a465294a85f82de851dc4",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"jsonrpc\": \"2.0\",\r\n  \"id\": 1,\r\n  \"method\": \"tools/list\",\r\n  \"params\": {\r\n    \"cursor\": \"optional-cursor-value\"\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/mcp",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "mcp"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
